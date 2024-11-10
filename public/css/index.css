@@ -1,0 +1,71 @@
+/* Default state */
+#hamburger #line1 {
+    transform-origin: top left;
+}
+
+#hamburger #line3 {
+    transform-origin: bottom left;
+}
+
+/* Active (cross) state */
+.hamburger-icon.active #line1 {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-icon.active #line2 {
+    opacity: 0;
+}
+
+.hamburger-icon.active #line3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Menu animation for dropdown */
+.menu-links {
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.menu-links.show {
+    max-height: 300px; /* Set a limit for the height when shown */
+}
+
+/* Hide desktop navbar for smaller screens */
+@media (max-width: 1200px) {
+    .desktop-nav {
+        display: none; /* Hide the desktop navbar on smaller screens */
+    }
+
+    .hamburger-nav {
+        display: flex; /* Show the hamburger navbar on smaller screens */
+        justify-content: space-around; /* Align items properly */
+        align-items: center; /* Center items vertically */
+        height: 17vh; /* Match height to desktop navbar */
+        padding: 0 2rem; /* Add padding for spacing */
+    }
+}
+
+/* Show desktop navbar for larger screens */
+@media (min-width: 1201px) {
+    .hamburger-nav {
+        display: none; /* Hide the hamburger navbar on larger screens */
+    }
+
+    .desktop-nav {
+        display: flex; /* Show the desktop navbar on larger screens */
+        justify-content: space-around; /* Align items properly */
+        align-items: center; /* Center items vertically */
+    }
+}
+
+/* Responsive text size for logo */
+.logo {
+    font-size: 2rem; /* Default size */
+}
+
+@media (max-width: 600px) {
+    .logo {
+        font-size: 1.5rem; /* Reduced size for screens below 600px */
+    }
+}

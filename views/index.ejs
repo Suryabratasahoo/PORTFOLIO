@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="/css/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+</head>
+
+<body class="font-poppins">
+    <nav class="desktop-nav w-full h-[17vh]">
+        <div class="logo">Suryabrata Sahoo</div>
+        <div>
+            <ul class="flex gap-[2rem] list-none text-[1.5rem]">
+                <li class="transition duration-300 ease-in-out">
+                    <a href="#about"
+                        class="relative inline-block pb-2 text-black transition-all duration-300 ease-in-out border-b-2 border-transparent hover:border-slate-500 hover:text-gray-500">About</a>
+                </li>
+                <li class="transition duration-300 ease-in-out">
+                    <a href="#experience"
+                        class="relative inline-block pb-2 text-black transition-all duration-300 ease-in-out border-b-2 border-transparent hover:border-slate-500 hover:text-gray-500">Experience</a>
+                </li>
+                <li class="transition duration-300 ease-in-out">
+                    <a href="#projects"
+                        class="relative inline-block pb-2 text-black transition-all duration-300 ease-in-out border-b-2 border-transparent hover:border-slate-500 hover:text-gray-500">Projects</a>
+                </li>
+                <li class="transition duration-300 ease-in-out">
+                    <a href="#contact"
+                        class="relative inline-block pb-2 text-black transition-all duration-300 ease-in-out border-b-2 border-transparent hover:border-slate-500 hover:text-gray-500">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Navbar for small screens -->
+    <nav class="hamburger-nav flex justify-center items-center lg:hidden">
+        <div class="logo">Suryabrata Sahoo</div>
+        <div class="hamburger-menu relative inline-block">
+            <div class="hamburger-icon flex flex-col justify-between h-[24px] w-[30px] cursor-pointer" id="hamburger">
+                <span class="w-full h-[2px] bg-black transition-all duration-300 ease-in-out" id="line1"></span>
+                <span class="w-full h-[2px] bg-black transition-all duration-300 ease-in-out" id="line2"></span>
+                <span class="w-full h-[2px] bg-black transition-all duration-300 ease-in-out" id="line3"></span>
+            </div>
+
+            <div id="menuLinks"
+                class="menu-links absolute top-full right-0 bg-white max-w-fit overflow-hidden transition-all duration-300 ease-in-out">
+                <li class="list-none"><a href="#about" onclick="toggleMenu()"
+                        class="block p-[10px] text-center text-[1.5rem] text-black transition-all duration-300 ease-in-out">About</a>
+                </li>
+                <li class="list-none"><a href="#experience" onclick="toggleMenu()"
+                        class="block p-[10px] text-center text-[1.5rem] text-black transition-all duration-300 ease-in-out">Experience</a>
+                </li>
+                <li class="list-none"><a href="#projects" onclick="toggleMenu()"
+                        class="block p-[10px] text-center text-[1.5rem] text-black transition-all duration-300 ease-in-out">Projects</a>
+                </li>
+                <li class="list-none"><a href="#contact" onclick="toggleMenu()"
+                        class="block p-[10px] text-center text-[1.5rem] text-black transition-all duration-300 ease-in-out">Contact</a>
+                </li>
+            </div>
+        </div>
+    </nav>
+    <section class="info  w-full mt-8 flex flex-col gap-8 md:flex-row md:h-[32rem] md:pl-44 md:gap-0 md:pr-32">
+        <div
+            class="image h-[14rem] w-[14rem]  mx-auto rounded-full md:w-[30rem] md:h-[30rem] md:flex md:justify-center md:items-center">
+            <img src="/images/suryaImage.jpg"
+                class="w-full h-full object-cover rounded-full md:mt-16 md:w-5/6 md:h-5/6 md:ml-16" alt="">
+        </div>
+        <div
+            class="info h-1/2 w-5/6  mx-auto flex flex-col gap-3 md:w-1/2 md:items-start md:justify-center md:h-full md:gap-5">
+            <div class="flex-col flex gap-[7px] h-1/2 md:max-h-36 md:gap-4">
+                <div class="font-semibold text-gray-700 text-lg text-center md:text-xl">Hello, I'm</div>
+                <div class="font-bold text-black text-3xl text-center md:text-5xl">Suryabrata Sahoo</div>
+                <div class="font-semibold text-gray-700 text-lg text-center md:text-2xl">FullStack Developer</div>
+            </div>
+            <!-- <div class="flex justify-center gap-4 md:w-3/4 md:justify-center mt-2">
+                <button
+                    class="  w-32 py-3 rounded-3xl text-sm font-semibold border-black border-[1.5px] hover:bg-black hover:text-white transition duration-300 ease-in">Download
+                    CV</button>
+                <button class="border w-32 py-3 rounded-3xl text-sm font-semibold bg-black text-white">Contact
+                    Info</button>
+            </div> -->
+            <div class="flex justify-center gap-4 md:w-3/4 md:justify-center">
+                <a href="https://www.linkedin.com/in/surya-brata-sahoo-9971b928a/"><div class="h-[2rem] w-[2rem]  rounded-full"><img src="/images/linkedin-logo.png"
+                    class="h-full w-full object-cover" alt=""></div></a>
+                <a href="https://github.com/Suryabratasahoo"><div class="h-[2rem] w-[2rem]  rounded-full"><img src="/images/github.png"
+                    class="h-full w-full object-cover" alt=""></div></a>
+                
+                
+            </div>
+
+        </div>
+    </section>
+    <section id="about" class=" w-full h-[38rem] mt-32 md:flex md:flex-col md:gap-16 md:mt-14">
+        <div class="aboutme flex flex-col gap-1">
+            <div class="text-lg text-center">Get To Know More</div>
+            <div class="text-4xl font-bold text-center md:text-5xl">About Me</div>
+        </div>
+        <div
+            class="md:flex md:flex-row md:mx-auto md:w-5/6 md:h-full md:mt-3 flex flex-col gap-4 md:gap-16 md:justify-center">
+            <div class="imageContainer w-full h-48 mt-8 md:h-96 md:w-1/3">
+                <div class="image w-1/2 h-full mx-auto border rounded-3xl md:w-[25rem]">
+                    <img src="/images/suryaimage2.jpg" class="w-full h-full rounded-3xl" alt="">
+                </div>
+            </div>
+            <div
+                class="info-container w-full h-full mt-2 md:flex md:flex-col md:justify-center flex flex-col gap-4 md:w-1/2 md:p-0">
+                <div class="2boxes w-full h-1/2 flex justify-around py-3 px-1 md:justify-start md:gap-8 md:h-[12rem]">
+                    <div
+                        class="box-1 w-[11rem] h-[14rem]  rounded-3xl border-gray-400 border-[2px] flex flex-col pt-7 gap-1 md:h-[10rem] md:w-[18rem] md:pt-4">
+                        <div class="badge w-8 h-8 mx-auto"><img src="/images/badge.png" alt=""></div>
+                        <div class="heading text-xl text-center font-bold mt-2">Experience</div>
+                        <div class="time text-center text-gray-600">1+ years</div>
+                        <div class="quality text-center text-gray-600">FullStack Development</div>
+                    </div>
+                    <div
+                        class="box-2 w-[11rem] h-[14rem]  rounded-3xl border-gray-400 border-[2px] flex flex-col pt-7 gap-1 md:h-[10rem] md:w-[18rem] md:pt-4">
+                        <div class="badge w-8 h-8 mx-auto"><img src="/images/badge.png" alt=""></div>
+                        <div class="heading text-xl text-center font-bold mt-2">Education</div>
+                        <div class="time text-center text-gray-600">B.Tech Computer Science</div>
+                    </div>
+                </div>
+                <div class="w-11/12 h-full md:h-1/2 mx-auto md:mx-0  text-justify text-gray-600">
+                    Hi, I’m Suryabrata Sahoo, a dedicated full stack developer with a passion for building responsive,
+                    user-friendly web applications. With a solid understanding of both front-end and back-end
+                    technologies, I create seamless digital experiences from design to deployment. I enjoy tackling
+                    complex problems, learning new frameworks, and optimizing performance to bring projects to life.
+                    Whether it’s developing a static site, creating dynamic applications, or contributing to
+                    collaborative projects, I am committed to delivering high-quality code and innovative solutions.
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="experience" class="w-full mt-96 flex flex-col gap-12 md:mt-32 md:h-[30rem]">
+        <div class="aboutme flex flex-col gap-1">
+            <div class="text-lg text-center">Explore My</div>
+            <div class="text-4xl font-bold text-center md:text-5xl">Experience</div>
+        </div>
+        <div class="experienceContainer w-full flex flex-col gap-8 md:flex-row md:mx-auto md:w-[70rem] md:p-2">
+            <div class="frontendExperience w-11/12 border-2 mx-auto rounded-3xl border-gray-400 md:w-full">
+                <div class="w-full h-full rounded-3xl p-6 flex flex-col gap-6 md:mt-0">
+                    <h1 class="text-center text-xl font-semibold text-gray-500 md:text-3xl">Frontend Development</h1>
+                    <ul class="flex flex-col gap-6 pl-8 mt-3 md:flex-row md:flex-wrap md:pl-0 md:justify-center">
+                        <li class="flex gap-4 md:w-1/3">
+                            <div class="logo w-8 h-8"><img src="/images/verified.png" alt=""></div>
+                            <div>
+                                <h1 class="text-xl font-semibold">HTML</h1>
+                                <h1>Experienced</h1>
+                            </div>
+                        </li>
+                        <li class="flex gap-4 md:w-1/3">
+                            <div class="logo w-8 h-8"><img src="/images/verified.png" alt=""></div>
+                            <div>
+                                <h1 class="text-xl font-semibold">CSS</h1>
+                                <h1>Experienced</h1>
+                            </div>
+                        </li>
+                        <li class="flex gap-4 md:w-1/3">
+                            <div class="logo w-8 h-8"><img src="/images/verified.png" alt=""></div>
+                            <div>
+                                <h1 class="text-xl font-semibold">Tailwind</h1>
+                                <h1>Experienced</h1>
+                            </div>
+                        </li>
+                        <li class="flex gap-4 md:w-1/3">
+                            <div class="logo w-8 h-8"><img src="/images/verified.png" alt=""></div>
+                            <div>
+                                <h1 class="text-xl font-semibold">JavaScript</h1>
+                                <h1>Intermediate</h1>
+                            </div>
+                        </li>
+                        <li class="flex gap-4 md:w-1/3">
+                            <div class="logo w-8 h-8"><img src="/images/verified.png" alt=""></div>
+                            <div>
+                                <h1 class="text-xl font-semibold">Material UI</h1>
+                                <h1>Experienced</h1>
+                            </div>
+                        </li>
+                        <li class="flex gap-4 md:w-1/3">
+                            <div class="logo w-8 h-8"><img src="/images/verified.png" alt=""></div>
+                            <div>
+                                <h1 class="text-xl font-semibold">React</h1>
+                                <h1>Newbie</h1>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="backendExperience w-11/12 border-2 mx-auto rounded-3xl border-gray-400 md:w-full">
+                <div class="w-full h-full rounded-3xl p-6 flex flex-col gap-6 md:mt-0">
+                    <h1 class="text-center text-xl font-semibold text-gray-500 md:text-3xl">Backend Development</h1>
+                    <ul class="flex flex-col gap-6 pl-8 mt-3 md:flex-row md:flex-wrap md:pl-0 md:justify-center">
+                        <li class="flex gap-4 md:w-1/3">
+                            <div class="logo w-8 h-8"><img src="/images/verified.png" alt=""></div>
+                            <div>
+                                <h1 class="text-xl font-semibold">Express.js</h1>
+                                <h1>Experienced</h1>
+                            </div>
+                        </li>
+                        <li class="flex gap-4 md:w-1/3">
+                            <div class="logo w-8 h-8"><img src="/images/verified.png" alt=""></div>
+                            <div>
+                                <h1 class="text-xl font-semibold">MongoDB</h1>
+                                <h1>Experienced</h1>
+                            </div>
+                        </li>
+                        <li class="flex gap-4 md:w-1/3">
+                            <div class="logo w-8 h-8"><img src="/images/verified.png" alt=""></div>
+                            <div>
+                                <h1 class="text-xl font-semibold">SQL</h1>
+                                <h1>Experienced</h1>
+                            </div>
+                        </li>
+                        <li class="flex gap-4 md:w-1/3">
+                            <div class="logo w-8 h-8"><img src="/images/verified.png" alt=""></div>
+                            <div>
+                                <h1 class="text-xl font-semibold">Node.js</h1>
+                                <h1>Intermediate</h1>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projectSection mt-20 w-full h-[100rem] flex flex-col gap-12 md:mt-64 md:h-[35rem]">
+        <div class="heading flex flex-col gap-1">
+            <div class="text-lg text-center">Browse My Recent</div>
+            <div class="text-4xl font-bold text-center md:text-5xl">Projects</div>
+        </div>
+        <div class="clones text-center text-4xl  font-semibold">Project Clones</div>
+        <div class="cards h-full flex flex-col gap-8 md:w-[70rem] md:mx-auto md:flex md:flex-row">
+
+            <div class="1 w-11/12 h-1/3 mx-auto border-gray-600 rounded-3xl border-[1px] bg-gray-50 md:h-[27rem]">
+                <div class="h-[24rem] w-3/4 m-auto mt-8 rounded-3xl">
+                    <div class="image w-full h-2/3  rounded-3xl"><img src="/images/netflix.jpg"
+                            class="w-full h-full rounded-3xl" alt=""></div>
+                    <div class="content mt-3">
+                        <h1 class="text-center text-xl font-semibold md:text-3xl">NETFLIX CLONE</h1>
+                        <div class="flex gap-4 mt-5">
+                            <a href="https://github.com/Suryabratasahoo/NetflixClone"
+                                class="w-[8rem] h-[3rem] flex items-center justify-center border-[1px] rounded-3xl border-gray-600 text-sm font-semibold md:hover:bg-black md:hover:text-white md:transition md:duration-300 md:ease-in">
+                                Github
+                            </a>
+                            <a href="https://netflixclone-0ybl.onrender.com/"
+                                class="w-[8rem] h-[3rem] flex items-center justify-center border-[1px] rounded-3xl border-gray-600 text-sm font-semibold md:hover:bg-black md:hover:text-white md:transition md:duration-300 md:ease-in">
+                                Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="1 w-11/12 h-1/3 mx-auto border-gray-600 rounded-3xl border-[1px] bg-gray-50 md:h-[27rem]">
+                <div class="h-[24rem] w-3/4 m-auto mt-8 rounded-3xl">
+                    <div class="image w-full h-2/3  rounded-3xl"><img src="/images/prime.jpg"
+                            class="w-full h-full rounded-3xl" alt=""></div>
+                    <div class="content mt-3">
+                        <h1 class="text-center text-xl font-semibold md:text-3xl">PRIME CLONE</h1>
+                        <div class="flex gap-4 mt-5">
+                            <a href="https://github.com/Suryabratasahoo/PrimeClone"
+                                class="w-[8rem] h-[3rem] flex items-center justify-center border-[1px] rounded-3xl border-gray-600 text-sm font-semibold md:hover:bg-black md:hover:text-white md:transition md:duration-300 md:ease-in">
+                                Github
+                            </a>
+                            <a href="https://primeclone-oiup.onrender.com/"
+                                class="w-[8rem] h-[3rem] flex items-center justify-center border-[1px] rounded-3xl border-gray-600 text-sm font-semibold md:hover:bg-black md:hover:text-white md:transition md:duration-300 md:ease-in">
+                                Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="1 w-11/12 h-1/3 mx-auto border-gray-600 rounded-3xl border-[1px] bg-gray-50 md:h-[27rem]">
+                <div class="h-[24rem] w-3/4 m-auto mt-8 rounded-3xl">
+                    <div class="image w-full h-2/3  rounded-3xl"><img src="/images/spotify.jpg"
+                            class="w-full h-full rounded-3xl" alt=""></div>
+                    <div class="content mt-3">
+                        <h1 class="text-center text-xl font-semibold md:text-3xl">SPOTIFY CLONE</h1>
+                        <div class="flex gap-4 mt-5">
+                            <a href="https://github.com/Suryabratasahoo/spotifyClone"
+                                class="w-[8rem] h-[3rem] flex items-center justify-center border-[1px] rounded-3xl border-gray-600 text-sm font-semibold md:hover:bg-black md:hover:text-white md:transition md:duration-300 md:ease-in">
+                                Github
+                            </a>
+                            <a href="https://spotifyclone-syxb.onrender.com/"
+                                class="w-[8rem] h-[3rem] flex items-center justify-center border-[1px] rounded-3xl border-gray-600 text-sm font-semibold md:hover:bg-black md:hover:text-white md:transition md:duration-300 md:ease-in">
+                                Demo
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="clones text-center text-4xl  font-semibold">Live Projects</div>
+        <div class="cards h-full flex flex-col gap-8 md:w-[70rem] md:mx-auto md:flex md:flex-row">
+            <div class="1 w-11/12 h-1/3 mx-auto border-gray-600 rounded-3xl border-[1px] bg-gray-50 md:h-[27rem]">
+                <div class="h-[24rem] w-3/4 m-auto mt-8 rounded-3xl">
+                    <div class="image w-full h-2/3  rounded-3xl"><img src="/images/airbnb.jpeg"
+                        class="w-full h-full rounded-3xl" alt=""></div>
+                    <div class="content mt-3">
+                        <h1 class="text-center text-xl font-semibold md:text-3xl">AIR-BNB</h1>
+                        <div class="flex gap-4 mt-5">
+                            <a href="https://github.com/Suryabratasahoo/AIR-BNB"
+                                class="w-[8rem] h-[3rem] flex items-center justify-center border-[1px] rounded-3xl border-gray-600 text-sm font-semibold md:hover:bg-black md:hover:text-white md:transition md:duration-300 md:ease-in">
+                                Github
+                            </a>
+                            <a href="https://advertisehotels.onrender.com/listings"
+                                class="w-[8rem] h-[3rem] flex items-center justify-center border-[1px] rounded-3xl border-gray-600 text-sm font-semibold md:hover:bg-black md:hover:text-white md:transition md:duration-300 md:ease-in">
+                                Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="1 w-11/12 h-1/3 mx-auto border-gray-600 rounded-3xl border-[1px] bg-gray-50 md:h-[27rem]">
+                <div class="h-[24rem] w-3/4 m-auto mt-8 rounded-3xl">
+                    <div class="image w-full h-2/3  rounded-3xl"><img src="/images/EASY MAIL.png"
+                        class="w-full h-full rounded-3xl" alt=""></div>
+                    <div class="content mt-3">
+                        <h1 class="text-center text-xl font-semibold md:text-3xl">IN PROGRESS...</h1>
+                        <div class="flex gap-4 mt-5 justify-center">
+                            <!-- <button -->
+                                <!-- class="w-[8rem] h-[3rem] border-[1px] rounded-3xl border-gray-600 text-sm font-semibold md:hover:bg-black md:hover:text-white md:transition md:duration-300 md:ease-in text-center" disabled>Github</button> -->
+                            <!-- <button
+                                class="w-[8rem] h-[3rem] border-[1px] rounded-3xl border-gray-600 text-sm font-semibold md:hover:bg-black md:hover:text-white transition duration-300 ease-in" disabled>Live
+                                Demo</button> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="1 w-11/12 h-1/3 mx-auto border-gray-600 rounded-3xl border-[1px] bg-gray-50 md:h-[27rem]">
+                <div class="h-[24rem] w-3/4 m-auto mt-8 rounded-3xl">
+                    <div class="image w-full h-2/3  rounded-3xl"><img src="/images/EASY MAIL (1).png"
+                        class="w-full h-full rounded-3xl" alt=""></div>
+                    <div class="content mt-3">
+                        <h1 class="text-center text-xl font-semibold md:text-3xl">IN PROGRESS...</h1>
+                        <div class="flex gap-4 mt-5">
+                            <!-- <button
+                                class="w-[8rem] h-[3rem] border-[1px] rounded-3xl border-gray-600 text-sm font-semibold md:hover:bg-black md:hover:text-white md:transition md:duration-300 md:ease-in">Github</button>
+                            <button
+                                class="w-[8rem] h-[3rem] border-[1px] rounded-3xl border-gray-600 text-sm font-semibold md:hover:bg-black md:hover:text-white transition duration-300 ease-in">Live
+                                Demo</button> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact-me mt-[95rem] w-full h-[30rem] flex flex-col md:mt-[52rem] md:h-[40rem] gap-12">
+        <div class="heading flex flex-col gap-2">
+            <div class="text-lg text-center">Get in Touch</div>
+            <div class="text-4xl font-bold text-center md:text-5xl">Contact Me</div>
+        </div>
+        <div class="mt-2 w-5/6 mx-auto h-[25rem] border p-6 border-gray-700 rounded-xl md:w-1/2 md:h-[24rem]">
+            <form action="/sendMessage" method="post" class="md:flex md:flex-wrap md:gap-4 justify-center">
+                <div class="w-full flex flex-col md:w-[18rem] gap-1">
+                    <label for="">Name</label>
+                    <input type="text" placeholder="Enter your name" name="name"
+                        class="border rounded-lg pl-2 w-full h-8 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                </div>
+                <div class="w-full flex flex-col mt-6 md:mt-0 md:w-[18rem] gap-1 ">
+                    <label for="">Email</label>
+                    <input type="text" placeholder="Enter your email" name="email"
+                        class="border rounded-lg pl-2 w-full h-8 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                </div>
+                <div class="w-full flex flex-col mt-6 md:mt-4 md:w-[37rem] gap-1">
+                    <label for="">Message</label>
+                    <textarea id="" placeholder="Message.." name="message"
+                        class="border rounded-lg pl-2 w-full h-20 md:h-28 focus:outline-none focus:ring-2 focus:ring-blue-300"></textarea>
+                </div>
+                <div class="mt-5 text-center">
+                    <button
+                        class="w-[8rem] h-[3rem] border-[1px] rounded-3xl border-gray-600 text-sm font-semibold md:hover:bg-black md:hover:text-white transition duration-300 ease-in">
+                        Send</button>
+                </div>
+            </form>
+        </div>
+
+
+    </section>
+    <footer class="w-full h-[22rem] mt-36 md:mt-32 md:h-[12rem]">
+        <div class="nav w-full h-1/2">
+            <ul
+                class="w-1/2 mx-auto h-full flex flex-col gap-5 items-center md:flex md:flex-row md:justify-center md:text-2xl">
+                <li class="transition duration-300 ease-in-out">
+                    <a href="#about"
+                        class="relative inline-block pb-2 text-black transition-all duration-300 ease-in-out border-b-2 border-transparent hover:border-slate-500 hover:text-gray-500">About</a>
+                </li>
+                <li class="transition duration-300 ease-in-out">
+                    <a href="#experience"
+                        class="relative inline-block pb-2 text-black transition-all duration-300 ease-in-out border-b-2 border-transparent hover:border-slate-500 hover:text-gray-500">Experience</a>
+                </li>
+                <li class="transition duration-300 ease-in-out">
+                    <a href="#projects"
+                        class="relative inline-block pb-2 text-black transition-all duration-300 ease-in-out border-b-2 border-transparent hover:border-slate-500 hover:text-gray-500">Projects</a>
+                </li>
+                <li class="transition duration-300 ease-in-out">
+                    <a href="#contact"
+                        class="relative inline-block pb-2 text-black transition-all duration-300 ease-in-out border-b-2 border-transparent hover:border-slate-500 hover:text-gray-500">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="copyright justify-center text-gray-600  h-1/2 flex pt-4 md:pt-4 md:h-1/3">Copyright &#169; 2024
+            Suryabrata. All Rights Reserved.</div>
+    </footer>
+
+
+
+
+</body>
+<script src="/js/main.js"></script>
+
+</html>
