@@ -8,7 +8,6 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname,"/public")));
 const EMAIL='suryabratasahoo882@gmail.com';
-const PASSWORD='mgpf obby sxur fxyj';
 const nodemailer = require('nodemailer')
 
 
