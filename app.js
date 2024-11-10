@@ -22,7 +22,7 @@ let config = {
 
 let transporter = nodemailer.createTransport(config);
 
-app.get("/portfolio",(req,res)=>{
+app.get("/",(req,res)=>{
     res.render('index.ejs')
 })
 app.post('/sendMessage',async(req,res)=>{
